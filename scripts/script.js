@@ -134,7 +134,7 @@ window.addEventListener('DOMContentLoaded', function(){
     }
   } */
 
-  let list = {
+ /*  let list = {
   name: 'denis',
   work: 'easycode',
   age: 29
@@ -147,5 +147,31 @@ window.addEventListener('DOMContentLoaded', function(){
   console.log(list)
 
   const aa=2;
+ */
+
+
+function ott() {
+  let arguments = [1,12,10]
+  let sum = 1;
+  if (arguments.length > 0) {
+    for (let i = 0; i < arguments.length; i++) {
+        sum *= arguments[i];
+    }
+    console.log(sum);
+} else console.log(0);
+}
+
+ott()
+
+
+function string() {
+  let text = 'tset'
+  let value = ''
+  for (i = text.length - 1; i >= 0 ; i--) {
+    value += text[i]
+  }
+  console.log(value)
+}
+string()
 })
 /* привет */
