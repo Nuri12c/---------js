@@ -37,6 +37,7 @@ body {
 }
 .yes, .no {
     border-radius: 5px;
+    
 }
 .opacity {
     opacity: 0;
@@ -55,7 +56,9 @@ body {
     width: 100%;
    }
 }
-
+.mb-2 {
+  height: 100px;
+}
 .colorBtn {
   width: 80px;
   height: 50px;

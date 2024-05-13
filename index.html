@@ -10,66 +10,70 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./styles/style.css">
-    
+    <link rel="stylesheet" href="./styles/style.css" />
+
     <title>Todo List</title>
   </head>
   <body>
-    <div class="confirmContainer none card">
-      <h3>Вы уверены?</h3>
+    
+    <div class="confirmContainer none card ">
+      <h3 class="mb-2">Вы уверены?</h3>
       <button class="yes btn-danger btn colorBtn">Да</button>
       <button class="no btn-danger btn colorBtn">Нет</button>
     </div>
     <div class="con">
-    <button class="btn-primary btn colorBtn" id="prevColor">←Цвет</button>
-    <button class="btn-primary btn colorBtn" id="nextColor">Цвет→</button>
-    <button class="btn-primary btn colorBtn" id="prevImage">←Фон</button>
-    <button class="btn-primary btn colorBtn" id="nextImage">Фон→</button>
-    <div class="form-section mt-5 ">
-      <div class="container ">
-        <div class="row ">
-          <div class="col-10 col-lg-6 mx-auto">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Заметки в дневнике.</h5>
-                <p>Рекоммендуется делать записи хотя-бы один раз в неделю.Ведение дневника может помочь сохранить здоровье, снять стресс, избавиться от негативных мыслей и просто освободить голову от ненужной информации. </p>
-                <form name="addTask">
-                  <input
-                    type="text"
-                    name="title"
-                    id="title"
-                    class="form-control"
-                    placeholder="Дата и название"
-                  />
-                  <input
-                    type="text"
-                    name="body"
-                    id="body"
-                    class="form-control mt-3"
-                    placeholder="Текст заметки"
-                  />
-                  <button type="submit" class="btn btn-primary mt-4">
-                    Добавить заметку
-                  </button>
-                </form>
+      <button class="btn-primary btn colorBtn" id="prevColor">←Цвет</button>
+      <button class="btn-primary btn colorBtn" id="nextColor">Цвет→</button>
+      <button class="btn-primary btn colorBtn" id="prevImage">←Фон</button>
+      <button class="btn-primary btn colorBtn" id="nextImage">Фон→</button>
+      <div class="form-section mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-10 col-lg-6 mx-auto">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Заметки в дневнике.</h5>
+                  <p>
+                    Рекоммендуется делать записи хотя-бы один раз в
+                    неделю.Ведение дневника может помочь сохранить здоровье,
+                    снять стресс, избавиться от негативных мыслей и просто
+                    освободить голову от ненужной информации.
+                  </p>
+                  <form name="addTask">
+                    <input
+                      type="text"
+                      name="title"
+                      id="title"
+                      class="form-control"
+                      placeholder="Дата и название"
+                    />
+                    <input
+                      type="text"
+                      name="body"
+                      id="body"
+                      class="form-control mt-3"
+                      placeholder="Текст заметки"
+                    />
+                    <button type="submit" class="btn btn-primary mt-4">
+                      Добавить заметку
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    
-    <div class="tasks-list-section mt-5" >
-      <div class="container">
-        <button class="restore-btn btn btn-primary">Вернуть</button>
 
-        <ul class="list-group ">
-           
-        </ul>
+      <div class="tasks-list-section mt-5">
+        <div class="container">
+          <button class="restore-btn btn btn-primary">Вернуть</button>
+
+          <ul class="list-group"></ul>
+        </div>
       </div>
     </div>
-    </div>
-    
+
     <script src="./scripts/app.js"></script>
     <script src="./scripts/app2.js"></script>
     <script src="./scripts/app3.js"></script>
