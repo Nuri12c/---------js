@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const bodyElement = document.body;
-  const colors = ["#3498db", "#e74c3c", "#2ecc71", "#f1c40f", "#9b59b6"];
+  const colors = ["#6ce692", "#e74c3c", "#2ecc71", "#f1c40f", "#9b59b6"];
   let currentColorIndex = 0; // Начальный индекс текущего цвета
 
   // Обновление цвета фона
