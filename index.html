@@ -1,69 +1,74 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./styles/style.css">
-    <script src="./scripts/script.js"></script>
-    <img src="" alt="">
-</head>
+    
+    <title>Todo List</title>
+  </head>
+  <body>
+    <button class="btn-primary" id="prevColor"><<Цвет</button>
+    <button class="btn-primary" id="nextColor">Цвет>></button>
+    <button class="btn-primary" id="prevImage"><<Фон</button>
+    <button class="btn-primary" id="nextImage">Фон>></button>
 
-<body>
-    <section class="section_yes">
-        <div class="container">
-            <h1 class="heading">ДОБРО ПОЖАЛОВАТЬ</h1>
-            <p>Lorem consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                Perspiciatis, rerum aliquam qui
-                 explicabo  unde. Nihil sapiente reprehenderit.</p>
-                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                    Perspiciatis, rerum aliquam qui
-                     explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
-                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                        Perspiciatis, rerum aliquam qui
-                         explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
-                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                            Perspiciatis, rerum aliquam qui
-                             explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
-                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                                Perspiciatis, rerum aliquam qui
-                                 explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
-                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                                    Perspiciatis, rerum aliquam qui
-                                     explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
-                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                                        Perspiciatis, rerum aliquam qui
-                                         explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
+    <div class="confirmContainer none card">
+      <h3>Вы уверены?</h3>
+      <button class="yes">Да</button>
+      <button class="no">Нет</button>
+    </div>
+    <div class="form-section mt-5 ">
+      <div class="container ">
+        <div class="row ">
+          <div class="col col-8 mx-auto">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Заметки в дневнике</h5>
+                <form name="addTask">
+                  <input
+                    type="date"
+                    name="title"
+                    id="title"
+                    class="form-control"
+                    placeholder="Дата"
+                  />
+                  <input
+                    type="text"
+                    name="body"
+                    id="body"
+                    class="form-control mt-3"
+                    placeholder="Текст заметки"
+                  />
+                  <button type="submit" class="btn btn-primary mt-4">
+                    Добавить заметку
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    <section class="section_no">
-        <div class="container">
-            <h1 class="heading">УБИРАЙСЯ!!!</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                Perspiciatis, rerum aliquam qui
-                 explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
-                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                    Perspiciatis, rerum aliquam qui
-                     explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
-                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                        Perspiciatis, rerum aliquam qui
-                         explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
-                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                            Perspiciatis, rerum aliquam qui
-                             explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
-                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                                Perspiciatis, rerum aliquam qui
-                                 explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
-                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                                    Perspiciatis, rerum aliquam qui
-                                     explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
-                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                                        Perspiciatis, rerum aliquam qui
-                                         explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
-                                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure velit ullam aspernatur accusantium. 
-                                            Perspiciatis, rerum aliquam qui
-                                             explicabo dignissimos iusto necessitatibus fugiat unde. Nihil sapiente accusantium qui nisi quidem reprehenderit.</p>
-        </div>
-    </section>
-</body>
+      </div>
+    </div>
+    
+    <div class="tasks-list-section mt-5" >
+      <div class="container">
+        <button class="restore-btn btn btn-primary">Вернуть</button>
+
+        <ul class="list-group ">
+           
+        </ul>
+      </div>
+    </div>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/app2.js"></script>
+    <script src="./scripts/app3.js"></script>
+  </body>
 </html>

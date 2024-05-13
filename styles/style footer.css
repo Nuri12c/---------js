@@ -1,0 +1,28 @@
+body {
+    background-color: antiquewhite;
+}
+.section_yes .container {
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: rgb(189, 189, 255);
+    height: 600px;
+    border-radius: 15px;
+}
+
+.section_no .container {
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: rgb(246, 41, 41);
+    height: 600px;
+    border-radius: 15px;
+}
+.section_yes {
+    display: none;
+}
+.section_no {
+    display: none;
+}
+.heading {
+    text-align: center;
+    font-size: 60px
+}
