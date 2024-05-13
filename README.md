@@ -1,1 +1,1 @@
-https://nuri12c.github.io/jslearning/
+https://nuri12c.github.io/myDiary/
