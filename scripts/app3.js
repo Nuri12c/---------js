@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const bodyElement = document.body;
   const images = [
-    "url('./img/husky-svgrepo-com.svg')",
-    "url('./img/juice-svgrepo-com.svg')",
+    "url('img/husky-svgrepo-com.svg')",
+    "url('../img/juice-svgrepo-com.svg')",
     "url('./img/lion-svgrepo-com.svg')",
     "url('./img/noodle-svgrepo-com.svg')",
     "url('./img/unicorn-svgrepo-com.svg')",
