@@ -127,13 +127,13 @@ const tasks = [
     if (!titleValue || !bodyValue) {
       /* если нет значений ебанули типа ошибку с красным стилем бордера */
       if (!titleValue) {
-        inputTitle.placeholder = "Введите title";
+        inputTitle.placeholder = "Введите дату и название!";
         inputTitle.classList.add("warning");
       } else {
         inputTitle.classList.remove("warning");
       }
       if (!bodyValue) {
-        inputBody.placeholder = "Введите body";
+        inputBody.placeholder = "Введите описание";
         inputBody.classList.add("warning");
       } else {
         inputBody.classList.remove("warning");

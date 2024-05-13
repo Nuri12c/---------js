@@ -51,7 +51,11 @@ body {
    body {
     background-size: 100px 100px;
    }
+   .form-section {
+    width: 100%;
+   }
 }
+
 .colorBtn {
   width: 80px;
   height: 50px;
