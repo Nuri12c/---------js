@@ -179,8 +179,8 @@ const tasks = [
     if (e.target.classList.contains("delete-btn")) {
       currentDeleteButton = e.target; // Сохраняем текущую кнопку удаления
       confirmContainer.classList.remove("none");
-      document.querySelector(".form-section").classList.add("mute");
-      document.querySelector(".tasks-list-section").classList.add("mute"); // Показываем контейнер подтверждения
+      document.querySelector(".con").classList.add("mute");
+       // Показываем контейнер подтверждения
       // Не добавляем обработчики для yesButton и noButton здесь
     }
   });
@@ -193,8 +193,8 @@ const tasks = [
       removedParents.push(parent);
       parent.remove();
       confirmContainer.classList.add("none");
-      document.querySelector(".form-section").classList.remove("mute");
-      document.querySelector(".tasks-list-section").classList.remove("mute");
+      document.querySelector(".con").classList.remove("mute");
+      
       currentDeleteButton = null;
     }
   });
@@ -202,8 +202,8 @@ const tasks = [
   // Обработчик событий для кнопки "Нет" остается без изменений
   noButton.addEventListener("click", function () {
     confirmContainer.classList.add("none");
-    document.querySelector(".form-section").classList.remove("mute");
-    document.querySelector(".tasks-list-section").classList.remove("mute"); // Скрываем контейнер подтверждения
+    document.querySelector(".con").classList.remove("mute");
+   // Скрываем контейнер подтверждения
   });
 
   const restoreBtn = document.querySelector(".restore-btn"); // Находим новую кнопку восстановления в DOM

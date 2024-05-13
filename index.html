@@ -15,16 +15,16 @@
     <title>Todo List</title>
   </head>
   <body>
+    <div class="confirmContainer none card">
+      <h3>Вы уверены?</h3>
+      <button class="yes btn-danger btn colorBtn">Да</button>
+      <button class="no btn-danger btn colorBtn">Нет</button>
+    </div>
+    <div class="con">
     <button class="btn-primary btn colorBtn" id="prevColor">←Цвет</button>
     <button class="btn-primary btn colorBtn" id="nextColor">Цвет→</button>
     <button class="btn-primary btn colorBtn" id="prevImage">←Фон</button>
     <button class="btn-primary btn colorBtn" id="nextImage">Фон→</button>
-
-    <div class="confirmContainer none card">
-      <h3>Вы уверены?</h3>
-      <button class="yes">Да</button>
-      <button class="no">Нет</button>
-    </div>
     <div class="form-section mt-5 ">
       <div class="container ">
         <div class="row ">
@@ -34,7 +34,7 @@
                 <h5 class="card-title">Заметки в дневнике</h5>
                 <form name="addTask">
                   <input
-                    type="date"
+                    type="text"
                     name="title"
                     id="title"
                     class="form-control"
@@ -67,6 +67,8 @@
         </ul>
       </div>
     </div>
+    </div>
+    
     <script src="./scripts/app.js"></script>
     <script src="./scripts/app2.js"></script>
     <script src="./scripts/app3.js"></script>
