@@ -28,7 +28,9 @@ const tasks = [
 (function (arrOfTasks) {
   const arrOfValues = []
   const ggggg = JSON.parse(localStorage.getItem('arr'))
-  tasks.unshift(...ggggg)
+  if (ggggg) {
+    tasks.unshift(...ggggg);
+  }
   console.log(ggggg)
   /* 1 - это самовызыыающаяся ф-ция. В сааамом конце страницы самый конец в скобках можно увидеть ее обращение к массиву обьектов */
   const objOfTasks = arrOfTasks.reduce((acc, task) => {
