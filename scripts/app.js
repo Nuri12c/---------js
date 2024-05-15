@@ -26,6 +26,10 @@ const tasks = [
 ];
 
 (function (arrOfTasks) {
+  const arrOfValues = []
+  const ggggg = JSON.parse(localStorage.getItem('arr'))
+  tasks.unshift(...ggggg)
+  console.log(ggggg)
   /* 1 - это самовызыыающаяся ф-ция. В сааамом конце страницы самый конец в скобках можно увидеть ее обращение к массиву обьектов */
   const objOfTasks = arrOfTasks.reduce((acc, task) => {
     /* 2 - здесь мы из массива обьектов с аккумулировали айдишки  и прибавили к ним массивы полные*/
@@ -142,10 +146,25 @@ const tasks = [
       inputTitle.classList.remove("warning");
       inputBody.classList.remove("warning");
       form.reset();
+      
       const task = createNewTask(
         titleValue,
         bodyValue
-      ); /* создали переменную, в которой будет через функцию пропускаться значение из тайтла и боди и создаваться из них обьект */
+      ); 
+      const localValues = createNewTask(titleValue, bodyValue);
+      arrOfValues.unshift(localValues)
+      localStorage.setItem("arr", JSON.stringify(arrOfValues));
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      /* создали переменную, в которой будет через функцию пропускаться значение из тайтла и боди и создаваться из них обьект */
       const listItem =
         listItemTemplate(
           task

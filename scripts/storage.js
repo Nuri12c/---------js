@@ -1,0 +1,1 @@
+localStorage.setItem('my item', 'my value')
