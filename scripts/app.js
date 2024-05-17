@@ -37,7 +37,8 @@ const tasks = [
   if (arrOfValues) {
     tasks.unshift(...arrOfValues);
   }
-
+  console.log(arrOfValues);
+  console.log(tasks);
   
   
   /* 1 - это самовызыыающаяся ф-ция. В сааамом конце страницы самый конец в скобках можно увидеть ее обращение к массиву обьектов */
