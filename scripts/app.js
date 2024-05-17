@@ -29,15 +29,15 @@ const tasks = [
   const arrOfValues = []
   let keyValue
   for (var i = 0; i < localStorage.length; i++) {
-    if (!localStorage.key(i)) {
-      console.log('ddtlbnt')
+   keyValue = (localStorage.getItem(localStorage.key(i)));
+    if (keyValue === undefined) {
+      console.log(keyValue)
     } else {
-      keyValue = localStorage.getItem(localStorage.key(i));
       arrOfValues.push(JSON.parse(keyValue));
     }
    
   }
-
+ console.log(keyValue);
   
   if (arrOfValues) {
     tasks.unshift(...arrOfValues);
