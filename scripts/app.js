@@ -2,8 +2,8 @@ const tasks = [
   {
     _id: "5d2ca9e2e03d40b326596aa7",
     completed: true,
-    body: "Occaecat non ea quis occaecat ad culpa amet deserunt incididunt elit fugiat pariatur. Exercitation commodo culpa in veniam proident laboris in. Excepteur cupidatat eiusmod dolor consectetur exercitation nulla aliqua veniam fugiat irure mollit. Eu dolor dolor excepteur pariatur aute do do ut pariatur consequat reprehenderit deserunt.\r\n",
-    title: "11.01.2004",
+    body: "Привет. Сегодня я дважды очень сильно смотрел в потолок.Это хороший день)\r\n",
+    title: "11.01.2024",
   },
   {
     _id: "5d2ca9e29c8a94095c1288e0",
