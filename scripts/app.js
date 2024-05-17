@@ -29,6 +29,7 @@ const tasks = [
   const arrOfValues = []
   let keyValue
   for (var i = 0; i < localStorage.length; i++) {
+    if (localStorage.key(i))
    keyValue = (localStorage.getItem(localStorage.key(i)));
    arrOfValues.push(JSON.parse(keyValue));
   }
