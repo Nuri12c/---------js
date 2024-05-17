@@ -27,11 +27,20 @@ const tasks = [
 
 (function (arrOfTasks) {
   const arrOfValues = []
-  const ggggg = JSON.parse(localStorage.getItem('arr'))
-  if (ggggg) {
-    tasks.unshift(...ggggg);
+  let keyValue
+  for (var i = 0; i < localStorage.length; i++) {
+   keyValue = (localStorage.getItem(localStorage.key(i)));
+   arrOfValues.push(JSON.parse(keyValue));
   }
-  console.log(ggggg)
+
+  
+  if (arrOfValues) {
+    tasks.unshift(...arrOfValues);
+  }
+  console.log(arrOfValues);
+  console.log(tasks);
+  
+  
   /* 1 - это самовызыыающаяся ф-ция. В сааамом конце страницы самый конец в скобках можно увидеть ее обращение к массиву обьектов */
   const objOfTasks = arrOfTasks.reduce((acc, task) => {
     /* 2 - здесь мы из массива обьектов с аккумулировали айдишки  и прибавили к ним массивы полные*/
@@ -81,6 +90,7 @@ const tasks = [
       "mt-2",
       "opacity"
     );
+
     const span =
       document.createElement(
         "span"
@@ -101,6 +111,9 @@ const tasks = [
       ); /* 11. Так же создали текст p и дали ему деструктурированный из обьекта текст 'body' */
     article.textContent = body;
     article.classList.add("mt-2", "w-100");
+    // Здесь в функции listItemTemplate, где создается кнопка и сам элемент li
+    li.setAttribute("data-id", _id);
+    deleteBtn.setAttribute("data-id", _id);
 
     li.appendChild(span); /*12. здесь мы засунули все созданное в лишку */
     li.appendChild(deleteBtn);
@@ -123,7 +136,7 @@ const tasks = [
     "submit",
     onFormSubmitHundler
   ); /* добавили событие на форму , чтобы запустилась функция которая ниже */
-
+  const idValue = Math.random();
   function onFormSubmitHundler(e) {
     e.preventDefault(); /* надпись чтобы не перезагружать страницу когда нажимаешь сабмит */
     const titleValue =
@@ -155,7 +168,8 @@ const tasks = [
       ); 
       const localValues = createNewTask(titleValue, bodyValue);
       arrOfValues.unshift(localValues)
-      localStorage.setItem("arr", JSON.stringify(arrOfValues));
+      
+      localStorage.setItem(`arr${idValue}`, JSON.stringify(localValues));////////////////////////////////////////
 
       
       
@@ -182,11 +196,25 @@ const tasks = [
       title,
       body,
       completed: false,
-      _id: `task-${Math.random()}`,
+      _id: idValue,
     };
     arrOfTasks[newTask._id] = newTask;
+    console.log(newTask)
     return { ...newTask };
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /* тут с удалениями и возвраты ? делал через искусственный интеллект \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
   const confirmContainer = document.querySelector(".confirmContainer");
@@ -205,11 +233,31 @@ const tasks = [
       // Не добавляем обработчики для yesButton и noButton здесь
     }
   });
-
+  
   // Измененный обработчик событий для кнопки "Да"
   yesButton.addEventListener("click", function () {
     if (currentDeleteButton) {
+    // Получаем ID элемента из атрибута data-id
+    const { id } = currentDeleteButton.dataset; // or currentDeleteButton.getAttribute('data-id');
+
+    // Удаляем элемент из localStorage
+    localStorage.removeItem(`arr${id}`);
+    console.log('Элемент с ID arr${id} был удален из localStorage');
+
+    // Удаляем элемент li из DOM
+    const parent = currentDeleteButton.closest("li");
+    parent.remove();
+
+    // Скрываем модальное окно и объясняем пользователям, что элемент был удален
+    confirmContainer.classList.add("none");
+    document.querySelector(".con").classList.remove("mute");
+
+    // Сбрасываем текущую кнопку удаления
+    currentDeleteButton = null;
+  }
+    if (currentDeleteButton) {
       const parent = currentDeleteButton.closest("li");
+      console.log(parent)
       // Сохраняем удаленный элемент в массив
       removedParents.push(parent);
       parent.remove();
